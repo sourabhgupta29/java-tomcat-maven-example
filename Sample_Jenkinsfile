@@ -13,5 +13,12 @@ pipeline {
             }
         }
 
+        stage ('Deploy') {
+            steps {
+                echo 'Deployed and artifact'
+            }
+        }
+
+
     }
 }
