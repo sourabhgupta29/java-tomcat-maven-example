@@ -3,7 +3,11 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
+                sh '''
+                echo "Path = ${Path}"
+                echo "M2_HOME = ${M2_HOME}"
                 echo  "Initializing the Code File"
+                '''
             }
         }
 
@@ -13,10 +17,5 @@ pipeline {
             }
         }
 
-         stage ('Deploy') {
-            steps {
-                echo 'Deployed an Artifact'
-            }
-        }
     }
 }
